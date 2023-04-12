@@ -1,13 +1,13 @@
 default_language_version:
+  # default language version for each language
   python: python3.8
-default_stages: [pre-commit, pre-push]
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
     hooks:
     -   id: trailing-whitespace
         name: Trim Trailing Whitespace
-        description: This hook trims trailing whitespace.
+        description: This hook trims trailing whitespace
         entry: trailing-whitespace-fixer
         language: python
     -   id: end-of-file-fixer
@@ -32,16 +32,8 @@ repos:
     hooks:
     -   id: python-safety-dependencies-check
         name: safety
-        description: This hook check common vulnerability on our package.
+        description: This hook check common vulnerability on our package
         entry: safety
         args: [check, --full-report, --file]
         language: system
         files: issues
-    # -   id: python-bandit-code-check
-    #     name: bandit
-    #     description: This hook check vulnerability on our code.
-    #     entry: bandit
-    #     args: [ Simco/Documents/test/graphql/*.py ] 
-    #     language: python
-    #     language_version: python3
-    #     types: [python]   
