@@ -1,1 +1,14 @@
 csv-data
+
+#django rest static file
+static
+static/admin
+static/django_extensions
+static/rest_framework_swagger
+
+#remove django cache
+graphql/__pycache__
+pokedex/__pycache__
+pokedex/migrations
+pokemon/__pycache__
+pokemon/migrations

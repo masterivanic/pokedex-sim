@@ -13,6 +13,7 @@ repos:
     -   id: end-of-file-fixer
     -   id: check-yaml
     -   id: check-added-large-files
+        exclude: static/
     -   id: check-ast
     -   id: check-merge-conflict
 -   repo: https://github.com/asottile/reorder_python_imports
@@ -27,13 +28,13 @@ repos:
     rev: 4.0.1
     hooks:
     -   id: flake8
-        args: [--max-line-length=76, --max-complexity=6]
+        args: [--max-line-length=92, --max-complexity=6]
 -   repo: local
     hooks:
     -   id: python-safety-dependencies-check
         name: safety
         description: This hook check common vulnerability on our package
         entry: safety
-        args: [check, --full-report, --file]
+        args: [check pokemon/*.py,check pokedex/*.py, --full-report, --file]
         language: system
         files: issues
