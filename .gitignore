@@ -1,9 +1,9 @@
 csv-data
 
-static
+static/
 
-graphql/__pycache__
-pokedex/__pycache__
-pokedex/migrations
-pokemon/__pycache__
-pokemon/migrations
+graphql/__pycache__/
+pokedex/__pycache__/
+pokedex/migrations/
+pokemon/__pycache__/
+pokemon/migrations/
